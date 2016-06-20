@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<html>
+    <head>
+        <title>Test blog</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.min.css">
+        <link rel="stylesheet" href="{% static 'css/table.css' %}">
+    </head>
+    <body>
+    <div class="wrapper">
+        <div class="row">
+            <div class="large-8 small-8 columns">
+                <table>
+                <thead>
+                    <tr>
+                        <th>Target</th>
+                        <th>Count</th>
+                        <th>Days</th>
+                    </tr>
+                </thead>
+                <tbody id="search-results">
+                {% block dayresults %}
+                {% endblock dayresults %}
+                </tbody>
+                </table>
+             </div>
+
+            {%  csrf_token %}
+            <div class="day-search small-4 columns">
+            <h3>Day</h3>
+                <input type="text" id="search" placeholder="1"/>
+            </div>
+        </div>
+    </div>
+
+    </body>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+    <script src="{% static 'js/ajax.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+</html>

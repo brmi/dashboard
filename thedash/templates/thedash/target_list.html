@@ -1,0 +1,12 @@
+{% extends 'thedash/base.html' %}
+{% block dayresults %}
+
+    {% for target in targets %}
+            <tr class="clickable-row" data-href="{% url 'dashboard'  pk=target.target %}">
+            <td>{{ target.target }}</td>
+            <td>{{ target.count }}</td>
+            <td>{{ target.days_back }}</td>
+            </tr>
+    {% endfor %}
+
+{% endblock dayresults%}
