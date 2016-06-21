@@ -1,49 +1,114 @@
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import 'https://fonts.googleapis.com/css?family=Hind+Guntur';
+@import 'https://fonts.googleapis.com/css?family=Archivo+Black';
 
 .wrapper{
     margin-left: auto;
-	margin-right: auto;
+    margin-right: auto;
     padding-top:5em;
 }
 
 .row{
     max-width: 90%;
 }
+h1{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3.8em;
+    color:#ff5252;
+}
+
+span {
+    color:#ff5252;
+}
 th{
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    font-size: 1.8em;
-    color:white;
+    font-family: 'Hind Gunter', sans-serif;
+    font-size: 2.2em;
+    color:#A5A5A5;
 }
 
 table tfoot td, table tfoot th, table thead td, table thead th {
-    padding: 1rem 1rem 1rem;
     font-weight: 400;
     text-align: left;
 }
 
+td{
+    font-size:1.1em;
+}
+
 table tbody, table tfoot, table thead {
-    border: 1px solid #f1f1f1;
-    background-color: black;
+    background-color:  white;
 }
 
 table tbody tr:nth-child(even), table tbody tr {
     background-color: #fff;
     border: 1px solid #f1f1f1;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.4em;
-    color: #666666;
+    font-family: 'Hind Gunter', sans-serif;
+    font-size: 1.6em;
+    font-weight: 400;
+    color: #BABABA;
 }
 
 tbody tr:hover, tr:nth-child(even):hover{
-    background-color:#f5f5f5
+    background-color:#F7F9F9;
+    color: #FF7D52;
 }
 
-.day-search h3{
+/* Click Effects */
+
+/*End Click Effects*/
+
+
+#search{
+    height: 140px;
+    width:140px;
+    margin: 0 auto;
+}
+
+input[type="text"]{
+    font-size: 2.4em;
+    font-family: 'Hind Gunter', sans-serif;
     text-align: center;
-    background-color: black;
-    color:white;
-    font-size: 1.8em;
+    color:#FF7D52;
+}
+
+img {
+  display: block;
+  max-width:230px;
+  max-height:80px;
+  width: auto;
+  height: auto;
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
 }
 
 tr.clickable-row { cursor: pointer; }
+
+
+
+@media only screen and (max-width: 50em) {
+    #search{
+        height: 110px;
+        width:110px;
+        margin: 0 auto;
+    }
+
+    input[type="text"]{
+        font-size: 1.8em;
+        font-family: "Hind Gunter", sans-serif;
+        text-align: center;
+    }
+
+
+    h1{
+        font-size: 3em;
+    }
+
+    th{
+        font-family: 'Hind Gunter', sans-serif;
+        font-weight: 400;
+        font-size: 1.8em;
+        color:white;
+    }
+
+}
+

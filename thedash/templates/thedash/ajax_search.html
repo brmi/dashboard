@@ -2,9 +2,10 @@
 {% block dayresults %}
     {% for target in entries %}
         <tr class="clickable-row" data-href="{% url 'dashboard'  pk=target.target %}">
-        <td>{{ target.target }}</td>
-        <td>{{ target.count }}</td>
-        <td>{{ target.days_back }}</td>
+        <td class="target">{{ target.target }}</td>
+        <td class="count">{{ target.count }}</td>
+{#        <td>{{ target.days_back }}</td>#}
         </tr>
     {% endfor %}
 {% endblock dayresults %}
+
