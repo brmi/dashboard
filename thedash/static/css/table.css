@@ -1,6 +1,12 @@
 @import 'https://fonts.googleapis.com/css?family=Hind+Guntur';
 @import 'https://fonts.googleapis.com/css?family=Archivo+Black';
 
+
+body{
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 .wrapper{
     margin-left: auto;
     margin-right: auto;
@@ -32,6 +38,8 @@ table tfoot td, table tfoot th, table thead td, table thead th {
 
 td{
     font-size:1.1em;
+    overflow: hidden;
+    position: relative;
 }
 
 table tbody, table tfoot, table thead {
@@ -45,17 +53,18 @@ table tbody tr:nth-child(even), table tbody tr {
     font-size: 1.6em;
     font-weight: 400;
     color: #BABABA;
+    position: relative;
 }
 
 tbody tr:hover, tr:nth-child(even):hover{
     background-color:#F7F9F9;
     color: #FF7D52;
+    user-select: none;
 }
 
-/* Click Effects */
-
-/*End Click Effects*/
-
+table tbody td{
+   padding: .625rem .625rem .625rem;
+}
 
 #search{
     height: 140px;
@@ -107,7 +116,6 @@ tr.clickable-row { cursor: pointer; }
         font-family: 'Hind Gunter', sans-serif;
         font-weight: 400;
         font-size: 1.8em;
-        color:white;
     }
 
 }
